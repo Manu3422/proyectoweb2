@@ -1,0 +1,37 @@
+
+<h1><span class="badge bg-danger">Escriba el nombre y lugar de la tarea &nbsp;<div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-secondary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-success" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-ligth" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-warning" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-info" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-light" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+  <div class="spinner-border text-dark" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div></span></h1>
+{% extends 'home.html' %}
+{% block titulo %}Crear Tarea{% endblock titulo %}
+{% block cuerpo %}
+<form method="post">
+    {% csrf_token %}  
+    
+    {{ form }}
+    <button type="submit" class="btn btn-info text-light">Crear o Editar</button>
+</form>
+<a href= "{% url 'home' %}"><input type="button" class="btn btn-dark" value ="Home">  </a>
+
+{% endblock cuerpo %}
